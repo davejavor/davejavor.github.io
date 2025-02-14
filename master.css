@@ -1,10 +1,14 @@
 :root {
-    --primary: #6b7280;
-    --secondary: #4b5563;
-    --bg: #ffffff;
-    --text: #374151;
-    --accent: #9ca3af;
-    --light-gray: #f3f4f6;
+    --primary: #64748b;      /* Hlavní šedá - pro důležité prvky */
+    --secondary: #475569;    /* Tmavší šedá - pro hover efekty */
+    --text: #1e293b;        /* Tmavá šedá - pro texty */
+    --bg: #ffffff;          /* Bílá - hlavní pozadí */
+    --accent: #3b82f6;      /* Modrá - pro zvýraznění důležitých prvků */
+    --light-gray: #f1f5f9;  /* Velmi světlá šedá - pro pozadí sekcí */
+    --success: #10b981;     /* Zelená - pro potvrzení */
+    --warning: #f59e0b;     /* Oranžová - pro upozornění */
+    --error: #ef4444;       /* Červená - pro chyby */
+    --info: #3b82f6;        /* Modrá - pro informace */
 }
 
 * {
