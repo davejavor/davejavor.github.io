@@ -21,7 +21,8 @@ body {
     font-family: system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     color: var(--text);
-    background: var(--bg);
+    background: linear-gradient(to bottom, #ffffff, #f1f5f9);
+    min-height: 100vh;
 }
 
 .menu-button {
