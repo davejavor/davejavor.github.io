@@ -21,7 +21,7 @@ body {
     font-family: system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     color: var(--text);
-    background: linear-gradient(to bottom, #ffffff, #f1f5f9);
+    background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
     min-height: 100vh;
 }
 
@@ -38,9 +38,10 @@ body {
 .navbar {
     position: fixed;
     width: 100%;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
 }
 
 .navbar-content {
@@ -110,6 +111,9 @@ body {
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
 }
 
 .services-grid {
