@@ -1,49 +1,291 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JaDeLab - Design & Development Studio</title>
+    <meta name="description" content="JaDeLab - Vývoj webových aplikací a databází. Technická řešení pro malé firmy, školy a neziskovky. Freelance web developer s pedagogickým přístupem.">
+    <meta name="keywords" content="web development, vývoj aplikací, databáze, HTML, CSS, JavaScript, React, PHP, MySQL, WordPress, freelance developer">
+    <meta name="author" content="JaDeLab">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="JaDeLab - Vývoj webových aplikací a databází">
+    <meta property="og:description" content="Technická řešení pro malé firmy, školy a neziskovky">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jadelab.cz">
+
+    <title>JaDeLab - Vývoj webových aplikací a databází</title>
     <link rel="stylesheet" href="master.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🔧%3C/text%3E%3C/svg%3E">
   </head>
   <body>
     <nav class="navbar">
-           <div class="navbar-content">
-               <div class="logo">JaDeLab</div>
-               <button class="menu-button">Menu</button>
-               <div class="nav-links">
-                   <a href="#services">Služby</a>
-                   <a href="portfolio.html">Portfolio</a>
-                   <a href="#contact">Kontakt</a>
-               </div>
-           </div>
-       </nav>
+      <div class="navbar-content">
+        <div class="logo">JaDeLab</div>
+        <button class="menu-button" aria-label="Toggle menu">Menu</button>
+        <div class="nav-links">
+          <a href="#services">Služby</a>
+          <a href="#tech-stack">Technologie</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Kontakt</a>
+        </div>
+      </div>
+    </nav>
 
-       <section class="hero">
-           <div class="hero-content">
-               <h1>Design & Development Studio</h1>
-               <p>Vytváříme moderní digitální řešení pro váš byznys</p>
-               <a href="#contact" class="button">Kontaktujte nás</a>
-           </div>
-       </section>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>JaDeLab</h1>
+        <p class="hero-subtitle">Vývoj webových aplikací a databází</p>
+        <p class="hero-description">Technická řešení pro malé firmy, školy a neziskovky</p>
+        <div class="hero-cta">
+          <a href="#contact" class="button button-primary">Napište mi</a>
+          <a href="mailto:jan@jadelab.cz" class="button button-secondary">jan@jadelab.cz</a>
+        </div>
+      </div>
+    </section>
 
-       <section id="services" class="services">
-           <h2>Naše služby</h2>
-           <div class="services-grid">
-               <div class="service-card">
-                   <h3>Webdesign</h3>
-                   <p>Moderní a responzivní webové stránky</p>
-               </div>
-               <div class="service-card">
-                   <h3>Development</h3>
-                   <p>Vývoj webových aplikací na míru</p>
-               </div>
-               <div class="service-card">
-                   <h3>UX/UI Design</h3>
-                   <p>Uživatelsky přívětivá rozhraní</p>
-               </div>
-           </div>
-       </section>
-       <script src="script.js"></script>
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Co nabízím</h2>
+        <div class="services-grid">
+          <a href="#contact" class="service-card" data-service="webdesign">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M3 9h18" stroke="currentColor" stroke-width="2"/>
+                <circle cx="6" cy="6" r="0.5" fill="currentColor"/>
+                <circle cx="8" cy="6" r="0.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3>Webdesign & Vývoj</h3>
+            <p>Moderní responzivní weby s důrazem na použitelnost</p>
+            <p class="service-tech">HTML/CSS, JavaScript, React, WordPress</p>
+          </a>
+
+          <a href="#contact" class="service-card" data-service="databaze">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="12" cy="6" rx="8" ry="3" stroke="currentColor" stroke-width="2"/>
+                <path d="M4 6v6c0 1.657 3.582 3 8 3s8-1.343 8-3V6" stroke="currentColor" stroke-width="2"/>
+                <path d="M4 12v6c0 1.657 3.582 3 8 3s8-1.343 8-3v-6" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>Databáze & Backend</h3>
+            <p>Návrh a implementace databázových systémů</p>
+            <p class="service-tech">MySQL, PostgreSQL, PHP, REST API</p>
+          </a>
+
+          <a href="#contact" class="service-card" data-service="aplikace">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="3" width="20" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 7l4 4-4 4M12 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Webové Aplikace</h3>
+            <p>Aplikace na míru pro vaše potřeby</p>
+            <p class="service-tech">React, JavaScript, API integrace</p>
+          </a>
+
+          <a href="#contact" class="service-card" data-service="hardware">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                <circle cx="8" cy="8" r="1" fill="currentColor"/>
+                <circle cx="12" cy="8" r="1" fill="currentColor"/>
+                <circle cx="16" cy="8" r="1" fill="currentColor"/>
+                <path d="M7 12h10M7 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Hardware Projekty</h3>
+            <p>IoT a embedded systémy pro automatizaci</p>
+            <p class="service-tech">Raspberry Pi, Python, GPIO</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="tech-stack" class="tech-stack">
+      <div class="container">
+        <h2>Technologie, se kterými pracuji</h2>
+        <div class="tech-categories">
+          <div class="tech-category">
+            <h3>Frontend</h3>
+            <div class="tech-badges">
+              <span class="tech-badge">HTML/CSS</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">WordPress</span>
+            </div>
+          </div>
+          <div class="tech-category">
+            <h3>Backend</h3>
+            <div class="tech-badges">
+              <span class="tech-badge">PHP</span>
+              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">PostgreSQL</span>
+              <span class="tech-badge">REST API</span>
+            </div>
+          </div>
+          <div class="tech-category">
+            <h3>Nástroje & Hardware</h3>
+            <div class="tech-badges">
+              <span class="tech-badge">Git</span>
+              <span class="tech-badge">Raspberry Pi</span>
+              <span class="tech-badge">Linux</span>
+              <span class="tech-badge">Python</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-preview">
+      <div class="container">
+        <h2>Vybrané projekty</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <div class="portfolio-placeholder">
+                <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="100" height="80" fill="#e2e8f0"/>
+                  <text x="50" y="40" text-anchor="middle" fill="#64748b" font-size="12">Školní IS</text>
+                </svg>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <h3>Informační systém pro školu</h3>
+              <p>Webová aplikace pro správu žáků, docházky a rozpisů</p>
+              <div class="portfolio-tech">
+                <span class="tech-badge-small">PHP</span>
+                <span class="tech-badge-small">MySQL</span>
+                <span class="tech-badge-small">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <div class="portfolio-placeholder">
+                <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="100" height="80" fill="#e2e8f0"/>
+                  <text x="50" y="40" text-anchor="middle" fill="#64748b" font-size="12">IoT projekt</text>
+                </svg>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <h3>Smart Home monitoring</h3>
+              <p>Systém pro monitoring klimatu s Raspberry Pi</p>
+              <div class="portfolio-tech">
+                <span class="tech-badge-small">Raspberry Pi</span>
+                <span class="tech-badge-small">Python</span>
+                <span class="tech-badge-small">REST API</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <div class="portfolio-placeholder">
+                <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="100" height="80" fill="#e2e8f0"/>
+                  <text x="50" y="40" text-anchor="middle" fill="#64748b" font-size="12">Web pro NGO</text>
+                </svg>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <h3>Web pro neziskovou organizaci</h3>
+              <p>Responzivní web s CMS a platební bránou</p>
+              <div class="portfolio-tech">
+                <span class="tech-badge-small">WordPress</span>
+                <span class="tech-badge-small">PHP</span>
+                <span class="tech-badge-small">CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-cta">
+          <a href="portfolio.html" class="button button-secondary">Všechny projekty</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Pojďme něco vytvořit</h2>
+        <p class="contact-intro">Máte projekt nebo nápad? Rád si s vámi popovídám o technických možnostech.</p>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-method">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <h3>Email</h3>
+                <a href="mailto:jan@jadelab.cz">jan@jadelab.cz</a>
+              </div>
+            </div>
+
+            <div class="contact-about">
+              <h3>O mně</h3>
+              <p>Jsem web developer s pedagogickým přístupem, učím na Montessori škole a rád kombinuji software s hardware projekty. Ve volném čase lezení a 3D tisk.</p>
+            </div>
+          </div>
+
+          <form class="contact-form" action="#" method="post">
+            <div class="form-group">
+              <label for="name">Jméno</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Zpráva</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="button button-primary">Odeslat zprávu</button>
+            <p class="form-note">Zatím funkční jen frontend, backend doplním později</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-main">
+            <div class="logo">JaDeLab</div>
+            <p class="footer-tagline">Postaveno s elektrony a Raspberry Pi</p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-section">
+              <h4>Navigace</h4>
+              <a href="#services">Služby</a>
+              <a href="#tech-stack">Technologie</a>
+              <a href="portfolio.html">Portfolio</a>
+              <a href="#contact">Kontakt</a>
+            </div>
+
+            <div class="footer-section">
+              <h4>Spojení</h4>
+              <a href="mailto:jan@jadelab.cz">Email</a>
+              <a href="https://github.com/davejavor" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 JaDeLab. Všechna práva vyhrazena.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
