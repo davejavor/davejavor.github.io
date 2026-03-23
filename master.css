@@ -257,6 +257,43 @@ body {
     border-top: 1px solid var(--border);
 }
 
+/* About Section */
+.about {
+    padding: 5rem 0;
+    background: white;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 3rem;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.about-card {
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid var(--border);
+}
+
+.about-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
+.about-card p {
+    color: var(--text);
+    line-height: 1.7;
+}
+
 /* Tech Stack Section */
 .tech-stack {
     padding: 5rem 0;
@@ -511,6 +548,7 @@ body {
 }
 
 .form-group input,
+.form-group select,
 .form-group textarea {
     width: 100%;
     padding: 0.875rem;
@@ -522,6 +560,7 @@ body {
 }
 
 .form-group input:focus,
+.form-group select:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
@@ -666,6 +705,7 @@ body {
     }
 
     .services,
+    .about,
     .tech-stack,
     .portfolio-preview,
     .contact {
@@ -673,10 +713,16 @@ body {
     }
 
     .services h2,
+    .about h2,
     .tech-stack h2,
     .portfolio-preview h2,
     .contact h2 {
         font-size: 2rem;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .services-grid {

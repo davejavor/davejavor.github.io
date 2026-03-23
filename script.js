@@ -50,51 +50,64 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Contact form handling (frontend only for now)
+// Contact form handling — Formspree
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        // Simulate form submission
         const button = this.querySelector('button[type="submit"]');
+        const formNote = this.querySelector('.form-note');
         const originalText = button.textContent;
 
         button.textContent = 'Odesílám...';
         button.disabled = true;
 
-        // Simulate a delay
-        setTimeout(() => {
-            button.textContent = 'Odesláno!';
-            button.style.background = '#10b981';
+        const formData = new FormData(this);
 
-            // Create mailto link as fallback
-            const mailtoLink = `mailto:jan@jadelab.cz?subject=Kontakt z webu - ${name}&body=${message}%0D%0A%0D%0AEmail: ${email}`;
+        try {
+            const response = await fetch('https://formspree.io/f/xjgangby', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
 
-            // Show success message
-            const formNote = this.querySelector('.form-note');
-            formNote.textContent = 'Backend zatím není implementovaný. Otevírám email klienta...';
-            formNote.style.color = '#10b981';
+            if (response.ok) {
+                // Úspěch
+                button.textContent = 'Odesláno ✓';
+                button.style.background = 'var(--success)';
+                formNote.textContent = 'Zpráva odeslána. Ozvu se do 3 pracovních dnů.';
+                formNote.style.color = 'var(--success)';
+                this.reset();
 
-            // Open email client
-            setTimeout(() => {
-                window.location.href = mailtoLink;
-
-                // Reset form after a delay
+                // Reset tlačítka po 4 sekundách
                 setTimeout(() => {
-                    this.reset();
                     button.textContent = originalText;
                     button.disabled = false;
                     button.style.background = '';
-                    formNote.textContent = 'Zatím funkční jen frontend, backend doplním později';
-                    formNote.style.color = '';
-                }, 2000);
-            }, 1000);
-        }, 1000);
+                    formNote.textContent = '';
+                }, 4000);
+
+            } else {
+                // Chyba serveru
+                const data = await response.json();
+                throw new Error(data?.errors?.[0]?.message || 'Chyba při odesílání');
+            }
+
+        } catch (error) {
+            button.textContent = 'Chyba při odesílání';
+            button.style.background = 'var(--error)';
+            formNote.innerHTML = `Nepodařilo se odeslat. Napište přímo na <a href="mailto:davejavor@gmail.com">davejavor@gmail.com</a>`;
+            formNote.style.color = 'var(--error)';
+
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.disabled = false;
+                button.style.background = '';
+            }, 4000);
+        }
     });
 }
 

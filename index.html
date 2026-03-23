@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JaDeLab - Vývoj webových aplikací a databází. Technická řešení pro malé firmy, školy a neziskovky. Freelance web developer s pedagogickým přístupem.">
-    <meta name="keywords" content="web development, vývoj aplikací, databáze, HTML, CSS, JavaScript, React, PHP, MySQL, WordPress, freelance developer">
+    <meta name="description" content="Navrhuji a stavím informační systémy na míru pro alternativní školy a malé organizace. 6+ let zkušeností jako učitel a IT správce na Montessori škole.">
+    <meta name="keywords" content="informační systém pro školy, Montessori IS, alternativní škola software, databáze pro organizace, web development, freelance developer">
     <meta name="author" content="JaDeLab">
 
     <!-- Open Graph tags -->
-    <meta property="og:title" content="JaDeLab - Vývoj webových aplikací a databází">
-    <meta property="og:description" content="Technická řešení pro malé firmy, školy a neziskovky">
+    <meta property="og:title" content="JaDeLab — Informační systémy pro alternativní školy">
+    <meta property="og:description" content="Navrhuji a stavím informační systémy na míru pro alternativní školy a malé organizace.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jadelab.cz">
 
-    <title>JaDeLab - Vývoj webových aplikací a databází</title>
+    <title>JaDeLab — Informační systémy pro alternativní školy</title>
     <link rel="stylesheet" href="master.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🔧%3C/text%3E%3C/svg%3E">
   </head>
@@ -24,6 +24,7 @@
         <button class="menu-button" aria-label="Toggle menu">Menu</button>
         <div class="nav-links">
           <a href="#services">Služby</a>
+          <a href="#about">O mně</a>
           <a href="#tech-stack">Technologie</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#contact">Kontakt</a>
@@ -34,11 +35,11 @@
     <section class="hero">
       <div class="hero-content">
         <h1>JaDeLab</h1>
-        <p class="hero-subtitle">Vývoj webových aplikací a databází</p>
-        <p class="hero-description">Technická řešení pro malé firmy, školy a neziskovky</p>
+        <p class="hero-subtitle">Informační systémy pro alternativní školy</p>
+        <p class="hero-description">Standardní školní systémy (Bakaláři, Edupage, Edookit) nejsou stavěné pro flexibilní rozvrhy, slovní hodnocení a netradiční organizaci výuky. Pomáhám školám dostat informace o žácích, rozvrhy a evidenci z chaosu tabulek do jednoho přehledného systému.</p>
         <div class="hero-cta">
           <a href="#contact" class="button button-primary">Napište mi</a>
-          <a href="mailto:jan@jadelab.cz" class="button button-secondary">jan@jadelab.cz</a>
+          <a href="mailto:davejavor@gmail.com" class="button button-secondary">davejavor@gmail.com</a>
         </div>
       </div>
     </section>
@@ -47,18 +48,16 @@
       <div class="container">
         <h2>Co nabízím</h2>
         <div class="services-grid">
-          <a href="#contact" class="service-card" data-service="webdesign">
+          <a href="#contact" class="service-card" data-service="is-skola">
             <div class="service-icon">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
-                <path d="M3 9h18" stroke="currentColor" stroke-width="2"/>
-                <circle cx="6" cy="6" r="0.5" fill="currentColor"/>
-                <circle cx="8" cy="6" r="0.5" fill="currentColor"/>
+                <rect x="2" y="3" width="20" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 7l4 4-4 4M12 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>Webdesign & Vývoj</h3>
-            <p>Moderní responzivní weby s důrazem na použitelnost</p>
-            <p class="service-tech">HTML/CSS, JavaScript, React, WordPress</p>
+            <h3>Informační systémy pro školy</h3>
+            <p>Systémy na míru pro alternativní školy — rozvrhy, evidence žáků, docházka. Stavěné pro to, jak školy skutečně fungují.</p>
+            <p class="service-tech">Firebase / Supabase, JavaScript, Google Workspace</p>
           </a>
 
           <a href="#contact" class="service-card" data-service="databaze">
@@ -69,37 +68,44 @@
                 <path d="M4 12v6c0 1.657 3.582 3 8 3s8-1.343 8-3v-6" stroke="currentColor" stroke-width="2"/>
               </svg>
             </div>
-            <h3>Databáze & Backend</h3>
-            <p>Návrh a implementace databázových systémů</p>
+            <h3>Databáze & organizace dat</h3>
+            <p>Přechod z chaosu tabulek a emailů do přehledného databázového řešení. Pro malé organizace a neziskovky.</p>
             <p class="service-tech">MySQL, PostgreSQL, PHP, REST API</p>
           </a>
 
-          <a href="#contact" class="service-card" data-service="aplikace">
+          <a href="#contact" class="service-card" data-service="webdesign">
             <div class="service-icon">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="3" width="20" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
-                <path d="M8 7l4 4-4 4M12 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M3 9h18" stroke="currentColor" stroke-width="2"/>
+                <circle cx="6" cy="6" r="0.5" fill="currentColor"/>
+                <circle cx="8" cy="6" r="0.5" fill="currentColor"/>
               </svg>
             </div>
-            <h3>Webové Aplikace</h3>
-            <p>Aplikace na míru pro vaše potřeby</p>
-            <p class="service-tech">React, JavaScript, API integrace</p>
+            <h3>Webdesign & vývoj</h3>
+            <p>Responzivní weby a webové aplikace na míru.</p>
+            <p class="service-tech">HTML/CSS, JavaScript, React, WordPress</p>
           </a>
+        </div>
+      </div>
+    </section>
 
-          <a href="#contact" class="service-card" data-service="hardware">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
-                <circle cx="8" cy="8" r="1" fill="currentColor"/>
-                <circle cx="12" cy="8" r="1" fill="currentColor"/>
-                <circle cx="16" cy="8" r="1" fill="currentColor"/>
-                <path d="M7 12h10M7 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Hardware Projekty</h3>
-            <p>IoT a embedded systémy pro automatizaci</p>
-            <p class="service-tech">Raspberry Pi, Python, GPIO</p>
-          </a>
+    <section id="about" class="about">
+      <div class="container">
+        <h2>Proč já</h2>
+        <div class="about-cards">
+          <div class="about-card">
+            <h3>Znám prostředí zevnitř</h3>
+            <p>6+ let pracuji jako učitel a IT správce na Montessori základní škole. Vím jak školy fungují, co učitelé potřebují a co regulatorní požadavky vyžadují.</p>
+          </div>
+          <div class="about-card">
+            <h3>Aktuální projekt</h3>
+            <p>Stavím informační systém pro alternativní školu v Praze. Výsledky a case study zveřejním po dokončení.</p>
+          </div>
+          <div class="about-card">
+            <h3>Onboarding pro netechnické uživatele</h3>
+            <p>Systém k ničemu, pokud ho učitelé nepoužívají. Součástí každého projektu je školení a dokumentace.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -127,12 +133,16 @@
             </div>
           </div>
           <div class="tech-category">
-            <h3>Nástroje & Hardware</h3>
+            <h3>Cloud & Nástroje</h3>
             <div class="tech-badges">
+              <span class="tech-badge">Firebase</span>
+              <span class="tech-badge">Supabase</span>
+              <span class="tech-badge">Google Workspace</span>
+              <span class="tech-badge">Apps Script</span>
               <span class="tech-badge">Git</span>
-              <span class="tech-badge">Raspberry Pi</span>
               <span class="tech-badge">Linux</span>
               <span class="tech-badge">Python</span>
+              <span class="tech-badge">Raspberry Pi</span>
             </div>
           </div>
         </div>
@@ -153,12 +163,12 @@
               </div>
             </div>
             <div class="portfolio-content">
-              <h3>Informační systém pro školu</h3>
-              <p>Webová aplikace pro správu žáků, docházky a rozpisů</p>
+              <h3>Informační systém pro alternativní školu</h3>
+              <p>Webová aplikace pro sdílení informací o žácích, rozvrhy a evidenci. Aktuálně ve vývoji — case study připravuji.</p>
               <div class="portfolio-tech">
-                <span class="tech-badge-small">PHP</span>
-                <span class="tech-badge-small">MySQL</span>
+                <span class="tech-badge-small">Supabase</span>
                 <span class="tech-badge-small">JavaScript</span>
+                <span class="tech-badge-small">Google Workspace</span>
               </div>
             </div>
           </div>
@@ -211,8 +221,8 @@
 
     <section id="contact" class="contact">
       <div class="container">
-        <h2>Pojďme něco vytvořit</h2>
-        <p class="contact-intro">Máte projekt nebo nápad? Rád si s vámi popovídám o technických možnostech.</p>
+        <h2>Máte zájem o spolupráci?</h2>
+        <p class="contact-intro">Pošlete mi základní informace o projektu a ozvu se zpět do 3 pracovních dnů.</p>
 
         <div class="contact-content">
           <div class="contact-info">
@@ -222,20 +232,21 @@
               </svg>
               <div>
                 <h3>Email</h3>
-                <a href="mailto:jan@jadelab.cz">jan@jadelab.cz</a>
+                <a href="mailto:davejavor@gmail.com">davejavor@gmail.com</a>
               </div>
             </div>
 
             <div class="contact-about">
               <h3>O mně</h3>
-              <p>Jsem web developer s pedagogickým přístupem, učím na Montessori škole a rád kombinuji software s hardware projekty. Ve volném čase lezení a 3D tisk.</p>
+              <p>Jsem David Javůrek — freelance developer a učitel na Montessori základní škole v Praze. Stavím informační systémy pro školy, které potřebují víc, než standardní řešení nabízí.</p>
             </div>
           </div>
 
-          <form class="contact-form" action="#" method="post">
+          <form class="contact-form" action="https://formspree.io/f/xjgangby" method="post">
+            <input type="hidden" name="_subject" value="Nová poptávka z JaDeLab webu">
             <div class="form-group">
-              <label for="name">Jméno</label>
-              <input type="text" id="name" name="name" required>
+              <label for="name">Jméno a organizace</label>
+              <input type="text" id="name" name="name" placeholder="Jana Nováková, ZŠ Kvítek" required>
             </div>
 
             <div class="form-group">
@@ -244,12 +255,26 @@
             </div>
 
             <div class="form-group">
-              <label for="message">Zpráva</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+              <label for="project-type">Typ projektu</label>
+              <select id="project-type" name="project-type">
+                <option value="">Vyberte typ projektu</option>
+                <option value="is-skola">Informační systém pro školu</option>
+                <option value="databaze">Databázové řešení / organizace dat</option>
+                <option value="web">Webdesign & vývoj</option>
+                <option value="konzultace">Konzultace / audit stávajícího systému</option>
+                <option value="jine">Jiné</option>
+              </select>
             </div>
 
-            <button type="submit" class="button button-primary">Odeslat zprávu</button>
-            <p class="form-note">Zatím funkční jen frontend, backend doplním později</p>
+            <div class="form-group">
+              <label for="message">Popis projektu</label>
+              <textarea id="message" name="message" rows="5"
+                placeholder="Stručně popište váš projekt nebo problém, který řešíte..." required></textarea>
+            </div>
+
+            <button type="submit" class="button button-primary">Odeslat poptávku</button>
+            <p class="form-note">Formulář zatím neodesílá — napište mi přímo na <a href="mailto:davejavor@gmail.com">davejavor@gmail.com</a></p>
+            <input type="text" name="_gotcha" style="display:none">
           </form>
         </div>
       </div>
@@ -260,13 +285,14 @@
         <div class="footer-content">
           <div class="footer-main">
             <div class="logo">JaDeLab</div>
-            <p class="footer-tagline">Postaveno s elektrony a Raspberry Pi</p>
+            <p class="footer-tagline">Informační systémy pro školy, které to myslí jinak</p>
           </div>
 
           <div class="footer-links">
             <div class="footer-section">
               <h4>Navigace</h4>
               <a href="#services">Služby</a>
+              <a href="#about">O mně</a>
               <a href="#tech-stack">Technologie</a>
               <a href="portfolio.html">Portfolio</a>
               <a href="#contact">Kontakt</a>
@@ -274,14 +300,14 @@
 
             <div class="footer-section">
               <h4>Spojení</h4>
-              <a href="mailto:jan@jadelab.cz">Email</a>
+              <a href="mailto:davejavor@gmail.com">Email</a>
               <a href="https://github.com/davejavor" target="_blank" rel="noopener">GitHub</a>
             </div>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2025 JaDeLab. Všechna práva vyhrazena.</p>
+          <p>&copy; 2026 JaDeLab. Všechna práva vyhrazena.</p>
         </div>
       </div>
     </footer>
