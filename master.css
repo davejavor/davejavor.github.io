@@ -140,8 +140,24 @@ body {
 .hero-description {
     font-size: 1.1rem;
     color: var(--text);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     opacity: 0.9;
+}
+
+.hero-social-proof {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.proof-separator {
+    opacity: 0.4;
 }
 
 .hero-cta {
@@ -173,6 +189,17 @@ body {
     background: var(--secondary);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(100, 116, 139, 0.3);
+}
+
+.button-accent {
+    background: var(--accent);
+    color: white;
+}
+
+.button-accent:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
 .button-secondary {
@@ -213,10 +240,6 @@ body {
     border-radius: 1rem;
     border: 2px solid var(--border);
     transition: all 0.3s ease;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    cursor: pointer;
 }
 
 .service-card:hover {
@@ -226,9 +249,9 @@ body {
 }
 
 .service-icon {
-    width: 60px;
-    height: 60px;
-    color: var(--primary);
+    width: 40px;
+    height: 40px;
+    color: var(--accent);
     margin-bottom: 1.5rem;
 }
 
@@ -257,6 +280,22 @@ body {
     border-top: 1px solid var(--border);
 }
 
+.service-cta {
+    display: inline-block;
+    margin-top: 1.25rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s, gap 0.2s;
+    letter-spacing: 0.01em;
+}
+
+.service-cta:hover {
+    color: #2563eb;
+    letter-spacing: 0.04em;
+}
+
 /* About Section */
 .about {
     padding: 5rem 0;
@@ -281,6 +320,18 @@ body {
     padding: 2rem;
     border-radius: 1rem;
     border: 2px solid var(--border);
+}
+
+.about-card-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.about-card-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
 .about-card h3 {
@@ -349,6 +400,80 @@ body {
     background: var(--primary);
     color: white;
     transform: translateY(-2px);
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 5rem 0;
+    background: white;
+}
+
+.pricing h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.pricing-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.pricing-card {
+    background: var(--light-gray);
+    padding: 1.75rem;
+    border-radius: 1rem;
+    border: 2px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
+}
+
+.pricing-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.pricing-card-desc {
+    color: var(--primary);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-card-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.pricing-card-price.free {
+    color: var(--success);
+}
+
+.pricing-note {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--secondary);
+    font-style: italic;
 }
 
 /* Portfolio Preview Section */
@@ -693,6 +818,15 @@ body {
         font-size: 1rem;
     }
 
+    .hero-social-proof {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .proof-separator {
+        display: none;
+    }
+
     .hero-cta {
         flex-direction: column;
         align-items: center;
@@ -708,6 +842,7 @@ body {
     .about,
     .tech-stack,
     .portfolio-preview,
+    .pricing,
     .contact {
         padding: 3rem 0;
     }
@@ -716,8 +851,18 @@ body {
     .about h2,
     .tech-stack h2,
     .portfolio-preview h2,
+    .pricing h2,
     .contact h2 {
         font-size: 2rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .pricing-card {
+        padding: 1.25rem;
     }
 
     .about-cards {
@@ -887,6 +1032,10 @@ body {
 }
 
 @media (max-width: 480px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
     .hero h1 {
         font-size: 2rem;
     }

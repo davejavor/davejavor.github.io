@@ -26,7 +26,8 @@
           <a href="#services">Služby</a>
           <a href="#about">O mně</a>
           <a href="#tech-stack">Technologie</a>
-          <a href="#portfolio">Portfolio</a>
+          <!-- <a href="#portfolio">Portfolio</a> -->
+          <a href="#pricing">Ceník</a>
           <a href="#contact">Kontakt</a>
         </div>
       </div>
@@ -37,8 +38,13 @@
         <h1>JaDeLab</h1>
         <p class="hero-subtitle">Informační systémy pro alternativní školy</p>
         <p class="hero-description">Standardní školní systémy (Bakaláři, Edupage, Edookit) nejsou stavěné pro flexibilní rozvrhy, slovní hodnocení a netradiční organizaci výuky. Pomáhám školám dostat informace o žácích, rozvrhy a evidenci z chaosu tabulek do jednoho přehledného systému.</p>
+        <div class="hero-social-proof">
+          <span>6+ let v alternativním školství</span>
+          <span class="proof-separator">·</span>
+          <span>360+ ušetřených hodin učitelům ročně</span>
+        </div>
         <div class="hero-cta">
-          <a href="#contact" class="button button-primary">Napište mi</a>
+          <a href="#contact" class="button button-accent">Napište mi</a>
           <a href="mailto:davejavor@gmail.com" class="button button-secondary">davejavor@gmail.com</a>
         </div>
       </div>
@@ -48,7 +54,7 @@
       <div class="container">
         <h2>Co nabízím</h2>
         <div class="services-grid">
-          <a href="#contact" class="service-card" data-service="is-skola">
+          <div class="service-card" data-service="is-skola">
             <div class="service-icon">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="2" y="3" width="20" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
@@ -58,9 +64,10 @@
             <h3>Informační systémy pro školy</h3>
             <p>Systémy na míru pro alternativní školy — rozvrhy, evidence žáků, docházka. Stavěné pro to, jak školy skutečně fungují.</p>
             <p class="service-tech">Firebase / Supabase, JavaScript, Google Workspace</p>
-          </a>
+            <a href="#contact" class="service-cta">Mám zájem →</a>
+          </div>
 
-          <a href="#contact" class="service-card" data-service="databaze">
+          <div class="service-card" data-service="databaze">
             <div class="service-icon">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <ellipse cx="12" cy="6" rx="8" ry="3" stroke="currentColor" stroke-width="2"/>
@@ -71,9 +78,10 @@
             <h3>Databáze & organizace dat</h3>
             <p>Přechod z chaosu tabulek a emailů do přehledného databázového řešení. Pro malé organizace a neziskovky.</p>
             <p class="service-tech">MySQL, PostgreSQL, PHP, REST API</p>
-          </a>
+            <a href="#contact" class="service-cta">Mám zájem →</a>
+          </div>
 
-          <a href="#contact" class="service-card" data-service="webdesign">
+          <div class="service-card" data-service="webdesign">
             <div class="service-icon">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
@@ -85,7 +93,8 @@
             <h3>Webdesign & vývoj</h3>
             <p>Responzivní weby a webové aplikace na míru.</p>
             <p class="service-tech">HTML/CSS, JavaScript, React, WordPress</p>
-          </a>
+            <a href="#contact" class="service-cta">Mám zájem →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -95,14 +104,38 @@
         <h2>Proč já</h2>
         <div class="about-cards">
           <div class="about-card">
+            <div class="about-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 21h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M5 21V8l7-5 7 5v13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="9" y="14" width="6" height="7" rx="0.5" stroke="currentColor" stroke-width="2"/>
+                <circle cx="9.5" cy="10.5" r="0.5" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+                <circle cx="14.5" cy="10.5" r="0.5" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+              </svg>
+            </div>
             <h3>Znám prostředí zevnitř</h3>
             <p>6+ let pracuji jako učitel a IT správce na Montessori základní škole. Vím jak školy fungují, co učitelé potřebují a co regulatorní požadavky vyžadují.</p>
           </div>
           <div class="about-card">
+            <div class="about-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2c0 0-5 4.5-5 9.5 0 1.2.3 2.3.8 3.2L12 16l4.2-1.3c.5-.9.8-2 .8-3.2C17 6.5 12 2 12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7 11.5L4 17l4.5-.5M17 11.5l3 5.5-4.5-.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="11" r="2" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
             <h3>Aktuální projekt</h3>
             <p>Stavím informační systém pro alternativní školu v Praze. Výsledky a case study zveřejním po dokončení.</p>
           </div>
           <div class="about-card">
+            <div class="about-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="2"/>
+                <circle cx="17" cy="9" r="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M3 21v-2a6 6 0 0112 0v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M17 13c2.2 0 4 1.8 4 4v1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
             <h3>Onboarding pro netechnické uživatele</h3>
             <p>Systém k ničemu, pokud ho učitelé nepoužívají. Součástí každého projektu je školení a dokumentace.</p>
           </div>
@@ -146,6 +179,46 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <h2>Orientační ceník</h2>
+        <p class="pricing-subtitle">Ceny se odvíjí od rozsahu projektu. Napište mi a do 3 dnů dostanete nezávaznou nabídku.</p>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Úvodní konzultace</h3>
+            <p class="pricing-card-desc">30 minut, nezávazně</p>
+            <div class="pricing-card-price free">zdarma</div>
+          </div>
+          <div class="pricing-card">
+            <h3>Konzultace / audit</h3>
+            <p class="pricing-card-desc">Zmapuju vaše současné systémy a navrhnu řešení</p>
+            <div class="pricing-card-price">od 5 000 Kč</div>
+          </div>
+          <div class="pricing-card">
+            <h3>Web na míru</h3>
+            <p class="pricing-card-desc">Prezentační web, landing page</p>
+            <div class="pricing-card-price">od 12 000 Kč</div>
+          </div>
+          <div class="pricing-card">
+            <h3>Pořádek v datech</h3>
+            <p class="pricing-card-desc">Sjednocení tabulek, čištění dat, automatizace</p>
+            <div class="pricing-card-price">od 10 000 Kč</div>
+          </div>
+          <div class="pricing-card">
+            <h3>Systém na míru</h3>
+            <p class="pricing-card-desc">Webová aplikace pro evidenci, rozvrhy, docházku — vše v jednom</p>
+            <div class="pricing-card-price">od 40 000 Kč</div>
+          </div>
+          <div class="pricing-card">
+            <h3>Průběžná podpora</h3>
+            <p class="pricing-card-desc">Údržba, úpravy, školení</p>
+            <div class="pricing-card-price">od 1 500 Kč/měs</div>
+          </div>
+        </div>
+        <p class="pricing-note">Součástí každého projektu je školení uživatelů a dokumentace.</p>
       </div>
     </section>
 
@@ -222,7 +295,7 @@
     <section id="contact" class="contact">
       <div class="container">
         <h2>Máte zájem o spolupráci?</h2>
-        <p class="contact-intro">Pošlete mi základní informace o projektu a ozvu se zpět do 3 pracovních dnů.</p>
+        <p class="contact-intro">Pošlete mi základní informace o projektu a ozvu se zpět do 5 pracovních dnů.</p>
 
         <div class="contact-content">
           <div class="contact-info">
@@ -272,7 +345,7 @@
                 placeholder="Stručně popište váš projekt nebo problém, který řešíte..." required></textarea>
             </div>
 
-            <button type="submit" class="button button-primary">Odeslat poptávku</button>
+            <button type="submit" class="button button-accent">Odeslat poptávku</button>
             <input type="text" name="_gotcha" style="display:none">
           </form>
         </div>
