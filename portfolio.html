@@ -1,300 +1,259 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio JaDeLab - Projekty vývoje webových aplikací, databází a hardware řešení.">
-    <meta name="keywords" content="portfolio, web development, projekty, aplikace, databáze, IoT">
-    <title>Portfolio - JaDeLab</title>
-    <link rel="stylesheet" href="master.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🔧%3C/text%3E%3C/svg%3E">
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="navbar-content">
-        <a href="index.html" class="logo" style="text-decoration: none;">JaDeLab</a>
-        <button class="menu-button" aria-label="Toggle menu">Menu</button>
-        <div class="nav-links">
-          <a href="index.html#services">Služby</a>
-          <a href="index.html#tech-stack">Technologie</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="index.html#contact">Kontakt</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio JaDeLab — projekty vývoje informačních systémů, webových aplikací a databázových řešení.">
+  <title>Portfolio — JaDeLab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="master.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🔧%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html"><span>Ja</span>DeLab</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">// služby</a></li>
+    <li><a href="portfolio.html" class="active">// portfolio</a></li>
+    <li><a href="index.html#about">// o mně</a></li>
+    <li><a href="index.html#pricing">// ceník</a></li>
+  </ul>
+  <div class="nav-end">
+    <a class="nav-cta" href="index.html#contact">Napište mi →</a>
+    <button class="nav-burger" aria-label="Otevřít menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-content">
+    <div class="hero-badge">PROJEKTY & REALIZACE</div>
+    <h1>Portfolio<span class="accent">.</span></h1>
+    <p class="page-hero-sub">Reálné projekty pro školy, firmy a neziskovky. Case study průběžně doplňuji.</p>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio-section">
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">Vše</button>
+    <button class="filter-btn" data-filter="is">Informační systémy</button>
+    <button class="filter-btn" data-filter="web">Web</button>
+    <button class="filter-btn" data-filter="database">Databáze</button>
+    <button class="filter-btn" data-filter="hardware">Hardware</button>
+  </div>
+
+  <div class="portfolio-list">
+
+    <div class="portfolio-card" data-category="is database">
+      <div class="portfolio-img">
+        <div class="portfolio-img-inner">
+          <div class="portfolio-img-icon">🏫</div>
+          <span class="portfolio-img-label">AKTUÁLNÍ PROJEKT</span>
         </div>
       </div>
-    </nav>
-
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Portfolio</h1>
-        <p class="hero-subtitle">Vybrané projekty a realizace</p>
-        <p class="hero-description">Weby, aplikace, databáze a hardware projekty pro školy, firmy a neziskové organizace</p>
-      </div>
-    </section>
-
-    <section class="portfolio-full">
-      <div class="container">
-        <div class="portfolio-filter">
-          <button class="filter-btn active" data-filter="all">Všechny projekty</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="database">Databáze</button>
-          <button class="filter-btn" data-filter="hardware">Hardware</button>
+      <div class="portfolio-info">
+        <span class="portfolio-badge">AKTUÁLNÍ · IS PRO ŠKOLU</span>
+        <h3>Informační systém — Montessori škola Praha</h3>
+        <p>Komplexní IS pro alternativní základní školu. Nahrazuje roztříštěné Excel tabulky jedním přehledným systémem — evidence žáků, slovní hodnocení, rozvrhové moduly, správa docházky.</p>
+        <div class="portfolio-features">
+          <h4>Klíčové funkce</h4>
+          <ul>
+            <li>Evidence žáků a docházky v reálném čase</li>
+            <li>Slovní hodnocení namísto číselných známek</li>
+            <li>Flexibilní rozvrhové moduly</li>
+            <li>Portál pro komunikaci s rodiči</li>
+          </ul>
         </div>
-
-        <div class="portfolio-grid">
-          <div class="portfolio-card-full" data-category="database web">
-            <div class="portfolio-image">
-              <div class="portfolio-placeholder">
-                <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="100" height="80" fill="#e2e8f0"/>
-                  <text x="50" y="40" text-anchor="middle" fill="#64748b" font-size="12">Školní IS</text>
-                </svg>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <h3>Informační systém pro školu</h3>
-              <p>Komplexní webová aplikace pro správu žáků, docházky, rozpisů a komunikaci s rodiči. Systém umožňuje učitelům efektivně spravovat třídy a rodiče mají přehled o docházce dětí v reálném čase.</p>
-              <div class="portfolio-features">
-                <h4>Klíčové funkce:</h4>
-                <ul>
-                  <li>Evidence žáků a docházky</li>
-                  <li>Rozvrhy a plánování aktivit</li>
-                  <li>Komunikační portál pro rodiče</li>
-                  <li>Exporty a statistiky</li>
-                </ul>
-              </div>
-              <div class="portfolio-tech">
-                <span class="tech-badge-small">PHP</span>
-                <span class="tech-badge-small">MySQL</span>
-                <span class="tech-badge-small">JavaScript</span>
-                <span class="tech-badge-small">Bootstrap</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio-card-full" data-category="hardware">
-            <div class="portfolio-image">
-              <div class="portfolio-placeholder">
-                <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="100" height="80" fill="#e2e8f0"/>
-                  <text x="50" y="40" text-anchor="middle" fill="#64748b" font-size="12">IoT projekt</text>
-                </svg>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <h3>Smart Home Monitoring System</h3>
-              <p>Systém pro monitoring teploty, vlhkosti a kvality vzduchu v domácnosti pomocí Raspberry Pi. Data se ukládají do databáze a jsou dostupná přes webové rozhraní s grafy a upozorněními.</p>
-              <div class="portfolio-features">
-                <h4>Klíčové funkce:</h4>
-                <ul>
-                  <li>Sběr dat ze senzorů DHT22 a MQ-135</li>
-                  <li>Webové rozhraní s real-time grafy</li>
-                  <li>Emailová upozornění při kritických hodnotách</li>
-                  <li>Historická data a trendy</li>
-                </ul>
-              </div>
-              <div class="portfolio-tech">
-                <span class="tech-badge-small">Raspberry Pi</span>
-                <span class="tech-badge-small">Python</span>
-                <span class="tech-badge-small">Flask</span>
-                <span class="tech-badge-small">PostgreSQL</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio-card-full" data-category="web">
-            <div class="portfolio-image">
-              <div class="portfolio-placeholder">
-                <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="100" height="80" fill="#e2e8f0"/>
-                  <text x="50" y="40" text-anchor="middle" fill="#64748b" font-size="12">Web pro NGO</text>
-                </svg>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <h3>Web pro neziskovou organizaci</h3>
-              <p>Responzivní prezentační web s CMS pro správu obsahu, integrací platební brány pro dárcovství a automatizovaným zasíláním poděkování. Design zdůrazňuje misi organizace a podporuje konverzi návštěvníků na dárce.</p>
-              <div class="portfolio-features">
-                <h4>Klíčové funkce:</h4>
-                <ul>
-                  <li>WordPress s custom theme</li>
-                  <li>Integrace platební brány GoPay</li>
-                  <li>Automatické emailové poděkování</li>
-                  <li>Administrace pro správu příspěvků</li>
-                </ul>
-              </div>
-              <div class="portfolio-tech">
-                <span class="tech-badge-small">WordPress</span>
-                <span class="tech-badge-small">PHP</span>
-                <span class="tech-badge-small">CSS</span>
-                <span class="tech-badge-small">GoPay API</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio-card-full" data-category="database web">
-            <div class="portfolio-image">
-              <div class="portfolio-placeholder">
-                <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="100" height="80" fill="#e2e8f0"/>
-                  <text x="50" y="40" text-anchor="middle" fill="#64748b" font-size="12">Inventární systém</text>
-                </svg>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <h3>Inventární systém pro malou firmu</h3>
-              <p>Webová aplikace pro správu skladových zásob, objednávek a fakturace. Systém umožňuje sledování pohybu zboží, evidenci dodavatelů a generování reportů pro účetnictví.</p>
-              <div class="portfolio-features">
-                <h4>Klíčové funkce:</h4>
-                <ul>
-                  <li>Evidence produktů a skladových zásob</li>
-                  <li>Správa objednávek a dodavatelů</li>
-                  <li>Generování faktur a reportů</li>
-                  <li>Exporty do CSV a PDF</li>
-                </ul>
-              </div>
-              <div class="portfolio-tech">
-                <span class="tech-badge-small">React</span>
-                <span class="tech-badge-small">Node.js</span>
-                <span class="tech-badge-small">PostgreSQL</span>
-                <span class="tech-badge-small">REST API</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio-card-full" data-category="web">
-            <div class="portfolio-image">
-              <div class="portfolio-placeholder">
-                <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="100" height="80" fill="#e2e8f0"/>
-                  <text x="50" y="40" text-anchor="middle" fill="#64748b" font-size="12">Booking systém</text>
-                </svg>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <h3>Online rezervační systém</h3>
-              <p>Systém pro online rezervace kurzů a workshopů s kalendářem, správou kapacit, automatickými připomínkami a platbami. Klienti mohou snadno rezervovat termíny a platit online.</p>
-              <div class="portfolio-features">
-                <h4>Klíčové funkce:</h4>
-                <ul>
-                  <li>Kalendář s dostupnými termíny</li>
-                  <li>Online platby přes Stripe</li>
-                  <li>Automatické připomínky emailem</li>
-                  <li>Administrace pro správu kurzů</li>
-                </ul>
-              </div>
-              <div class="portfolio-tech">
-                <span class="tech-badge-small">JavaScript</span>
-                <span class="tech-badge-small">PHP</span>
-                <span class="tech-badge-small">MySQL</span>
-                <span class="tech-badge-small">Stripe API</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio-card-full" data-category="hardware">
-            <div class="portfolio-image">
-              <div class="portfolio-placeholder">
-                <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="100" height="80" fill="#e2e8f0"/>
-                  <text x="50" y="40" text-anchor="middle" fill="#64748b" font-size="12">3D tiskárna</text>
-                </svg>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <h3>Automatizace 3D tiskárny</h3>
-              <p>Raspberry Pi projekt pro vzdálené ovládání a monitoring 3D tiskárny s webkamerou. Umožňuje sledovat průběh tisku odkudkoliv, nahrávat G-code soubory a dostávat notifikace o dokončení tisku.</p>
-              <div class="portfolio-features">
-                <h4>Klíčové funkce:</h4>
-                <ul>
-                  <li>Vzdálené ovládání přes webové rozhraní</li>
-                  <li>Live stream z webkamery</li>
-                  <li>Nahrávání G-code souborů</li>
-                  <li>Push notifikace při dokončení</li>
-                </ul>
-              </div>
-              <div class="portfolio-tech">
-                <span class="tech-badge-small">Raspberry Pi</span>
-                <span class="tech-badge-small">OctoPrint</span>
-                <span class="tech-badge-small">Python</span>
-                <span class="tech-badge-small">WebRTC</span>
-              </div>
-            </div>
-          </div>
+        <div class="tech-tags">
+          <span class="tag">Supabase</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Google Workspace</span>
+          <span class="tag">Apps Script</span>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="contact">
-      <div class="container">
-        <h2>Máte projekt?</h2>
-        <p class="contact-intro">Rád si s vámi popovídám o vašich potřebách a navrhnu technické řešení.</p>
-        <div class="portfolio-cta">
-          <a href="index.html#contact" class="button button-primary">Kontaktujte mě</a>
-          <a href="mailto:davejavor@gmail.com" class="button button-secondary">davejavor@gmail.com</a>
+    <div class="portfolio-card" data-category="hardware">
+      <div class="portfolio-img">
+        <div class="portfolio-img-inner">
+          <div class="portfolio-img-icon">🍓</div>
+          <span class="portfolio-img-label">HARDWARE · IoT</span>
         </div>
       </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-main">
-            <div class="logo">JaDeLab</div>
-            <p class="footer-tagline">Postaveno s elektrony a Raspberry Pi</p>
-          </div>
-
-          <div class="footer-links">
-            <div class="footer-section">
-              <h4>Navigace</h4>
-              <a href="index.html#services">Služby</a>
-              <a href="index.html#tech-stack">Technologie</a>
-              <a href="portfolio.html">Portfolio</a>
-              <a href="index.html#contact">Kontakt</a>
-            </div>
-
-            <div class="footer-section">
-              <h4>Spojení</h4>
-              <a href="mailto:davejavor@gmail.com">Email</a>
-              <a href="https://github.com/davejavor" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </div>
+      <div class="portfolio-info">
+        <span class="portfolio-badge">HARDWARE · IoT</span>
+        <h3>Smart Home Monitoring — Raspberry Pi</h3>
+        <p>Systém pro monitoring teploty, vlhkosti a kvality vzduchu s Raspberry Pi. Data dostupná přes webové rozhraní s grafy a emailovými upozorněními při kritických hodnotách.</p>
+        <div class="portfolio-features">
+          <h4>Klíčové funkce</h4>
+          <ul>
+            <li>Sběr dat ze senzorů DHT22 a MQ-135</li>
+            <li>Webové rozhraní s real-time grafy</li>
+            <li>Emailová upozornění při kritických hodnotách</li>
+            <li>Historická data a trendy</li>
+          </ul>
         </div>
-
-        <div class="footer-bottom">
-          <p>&copy; 2026 JaDeLab. Všechna práva vyhrazena.</p>
+        <div class="tech-tags">
+          <span class="tag">Raspberry Pi</span>
+          <span class="tag">Python</span>
+          <span class="tag">Flask</span>
+          <span class="tag">PostgreSQL</span>
         </div>
       </div>
-    </footer>
+    </div>
 
-    <script src="script.js"></script>
-    <script>
-      // Portfolio filter functionality
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const portfolioItems = document.querySelectorAll('.portfolio-card-full');
+    <div class="portfolio-card" data-category="web">
+      <div class="portfolio-img">
+        <div class="portfolio-img-inner">
+          <div class="portfolio-img-icon">🌐</div>
+          <span class="portfolio-img-label">WEB · NGO</span>
+        </div>
+      </div>
+      <div class="portfolio-info">
+        <span class="portfolio-badge">WEB · NGO</span>
+        <h3>Web pro neziskovou organizaci</h3>
+        <p>Responzivní prezentační web s CMS pro správu obsahu a integrací platební brány pro dárcovství. Design zdůrazňuje misi organizace a podporuje konverzi návštěvníků na dárce.</p>
+        <div class="portfolio-features">
+          <h4>Klíčové funkce</h4>
+          <ul>
+            <li>WordPress s custom theme</li>
+            <li>Integrace platební brány GoPay</li>
+            <li>Automatické emailové poděkování dárcům</li>
+            <li>Administrace pro správu příspěvků</li>
+          </ul>
+        </div>
+        <div class="tech-tags">
+          <span class="tag">WordPress</span>
+          <span class="tag">PHP</span>
+          <span class="tag">CSS</span>
+          <span class="tag">GoPay API</span>
+        </div>
+      </div>
+    </div>
 
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          // Update active button
-          filterBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
+    <div class="portfolio-card" data-category="database web">
+      <div class="portfolio-img">
+        <div class="portfolio-img-inner">
+          <div class="portfolio-img-icon">📦</div>
+          <span class="portfolio-img-label">DATABÁZE · WEB</span>
+        </div>
+      </div>
+      <div class="portfolio-info">
+        <span class="portfolio-badge">DATABÁZE · WEB</span>
+        <h3>Inventární systém pro malou firmu</h3>
+        <p>Webová aplikace pro správu skladových zásob, objednávek a fakturace. Sledování pohybu zboží, evidence dodavatelů a generování reportů pro účetnictví.</p>
+        <div class="portfolio-features">
+          <h4>Klíčové funkce</h4>
+          <ul>
+            <li>Evidence produktů a skladových zásob</li>
+            <li>Správa objednávek a dodavatelů</li>
+            <li>Generování faktur a reportů</li>
+            <li>Exporty do CSV a PDF</li>
+          </ul>
+        </div>
+        <div class="tech-tags">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">REST API</span>
+        </div>
+      </div>
+    </div>
 
-          const filter = btn.dataset.filter;
+    <div class="portfolio-card" data-category="web">
+      <div class="portfolio-img">
+        <div class="portfolio-img-inner">
+          <div class="portfolio-img-icon">📅</div>
+          <span class="portfolio-img-label">WEB · BOOKING</span>
+        </div>
+      </div>
+      <div class="portfolio-info">
+        <span class="portfolio-badge">WEB · BOOKING</span>
+        <h3>Online rezervační systém</h3>
+        <p>Systém pro online rezervace kurzů a workshopů s kalendářem, správou kapacit, automatickými připomínkami a platbami přes Stripe.</p>
+        <div class="portfolio-features">
+          <h4>Klíčové funkce</h4>
+          <ul>
+            <li>Kalendář s dostupnými termíny</li>
+            <li>Online platby přes Stripe</li>
+            <li>Automatické připomínky emailem</li>
+            <li>Administrace pro správu kurzů</li>
+          </ul>
+        </div>
+        <div class="tech-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">PHP</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Stripe API</span>
+        </div>
+      </div>
+    </div>
 
-          // Filter portfolio items
-          portfolioItems.forEach(item => {
-            if (filter === 'all') {
-              item.style.display = 'grid';
-            } else {
-              const categories = item.dataset.category.split(' ');
-              if (categories.includes(filter)) {
-                item.style.display = 'grid';
-              } else {
-                item.style.display = 'none';
-              }
-            }
-          });
-        });
-      });
-    </script>
-  </body>
+    <div class="portfolio-card" data-category="hardware">
+      <div class="portfolio-img">
+        <div class="portfolio-img-inner">
+          <div class="portfolio-img-icon">🖨️</div>
+          <span class="portfolio-img-label">HARDWARE · AUTOMATIZACE</span>
+        </div>
+      </div>
+      <div class="portfolio-info">
+        <span class="portfolio-badge">HARDWARE · AUTOMATIZACE</span>
+        <h3>Vzdálené ovládání 3D tiskárny</h3>
+        <p>Raspberry Pi projekt pro vzdálené ovládání a monitoring 3D tiskárny s webkamerou. Sledování průběhu tisku odkudkoliv, nahrávání G-code a push notifikace o dokončení.</p>
+        <div class="portfolio-features">
+          <h4>Klíčové funkce</h4>
+          <ul>
+            <li>Vzdálené ovládání přes webové rozhraní</li>
+            <li>Live stream z webkamery</li>
+            <li>Nahrávání G-code souborů</li>
+            <li>Push notifikace při dokončení tisku</li>
+          </ul>
+        </div>
+        <div class="tech-tags">
+          <span class="tag">Raspberry Pi</span>
+          <span class="tag">OctoPrint</span>
+          <span class="tag">Python</span>
+          <span class="tag">WebRTC</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<div class="contact-cta">
+  <div class="contact-cta-text">
+    <h2>Máte projekt?</h2>
+    <p>Rád si popovídám o vašich potřebách a navrhnu technické řešení.</p>
+  </div>
+  <div class="cta-actions">
+    <a class="btn-primary" href="index.html#contact">Napsat →</a>
+    <a class="btn-ghost" href="mailto:davejavor@gmail.com">davejavor@gmail.com</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><span>Ja</span>DeLab</div>
+  <div class="footer-links">
+    <a href="index.html#services">Služby</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="index.html#about">O mně</a>
+    <a href="index.html#pricing">Ceník</a>
+    <a href="mailto:davejavor@gmail.com">Email</a>
+    <a href="https://github.com/davejavor" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <span class="footer-copy">© 2026 JaDeLab</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
