@@ -42,7 +42,7 @@ if (sections.length && navAnchors.length) {
     navAnchors.forEach(a => {
       a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--text)' : '';
     });
-  });
+  }, { passive: true });
 }
 
 // Portfolio filter (portfolio.html)

@@ -432,7 +432,7 @@ h2 {
   display: flex; align-items: center; justify-content: center;
   font-size: 0.75rem;
 }
-form { display: flex; flex-direction: column; gap: 1rem; }
+form { display: flex; flex-direction: column; gap: 1rem; accent-color: var(--accent); }
 label {
   font-family: var(--mono); font-size: 0.72rem;
   color: var(--muted); letter-spacing: 0.06em;
@@ -644,6 +644,7 @@ footer {
   .nav-links {
     display: none;
     position: fixed; top: 64px; left: 0; right: 0; z-index: 99;
+    overscroll-behavior: contain;
     background: rgba(11, 13, 17, 0.97);
     backdrop-filter: blur(16px);
     flex-direction: column;
@@ -730,4 +731,37 @@ footer {
   /* ensure 44px touch targets */
   .btn-primary, .btn-ghost, button[type=submit], .filter-btn { min-height: 44px; }
   .nav-burger { width: 40px; height: 40px; }
+
+  /* hide decorative elements that waste space */
+  .hero-glow { display: none; }
+  .about-avatar { display: none; }
+
+  /* keep tech stack readable at 2 columns */
+  .stack-sections { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ============================================================
+   TOUCH DEVICES — remove hover effects
+   ============================================================ */
+@media (hover: none) {
+  .service-card:hover,
+  .work-card:hover,
+  .pricing-card:hover,
+  .portfolio-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .btn-primary:hover,
+  .btn-ghost:hover {
+    transform: none;
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION — respect user preference
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  .hero-glow { display: none; }
 }
